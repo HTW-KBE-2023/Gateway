@@ -10,26 +10,23 @@ builder.Services.AddOcelot(builder.Configuration);
 builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
     app.UseSwaggerForOcelotUI(option =>
     {
         option.PathToSwaggerGenerator = "/swagger/docs";
+    }, uiOption =>
+    {
+        uiOption.DocumentTitle = "Swagger - Gateway Documentation";
+        uiOption.EnableDeepLinking();
     });
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

@@ -4,7 +4,7 @@
   },
   "SwaggerEndPoints": [
     {
-      "Key": "fights",
+      "Key": "rpg",
       "Config": [
         {
           "Name": "RPG-API",
@@ -17,8 +17,8 @@
   "Routes": [
     {
       "UpstreamPathTemplate": "/gateway/fights",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "DownstreamPathTemplate": "api/fights",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/fights",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -26,7 +26,71 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "fights"
+      "SwaggerKey": "rpg"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/fights/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamPathTemplate": "/api/fights/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rpg_api",
+          "Port": 80
+        }
+      ],
+      "SwaggerKey": "rpg"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/monsters",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/monsters",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rpg_api",
+          "Port": 80
+        }
+      ],
+      "SwaggerKey": "rpg"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/monsters/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/monsters/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rpg_api",
+          "Port": 80
+        }
+      ],
+      "SwaggerKey": "rpg"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/players",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/players",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rpg_api",
+          "Port": 80
+        }
+      ],
+      "SwaggerKey": "rpg"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/players/{everything}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/players/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rpg_api",
+          "Port": 80
+        }
+      ],
+      "SwaggerKey": "rpg"
     }
-  ]
 }
