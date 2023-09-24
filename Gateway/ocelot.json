@@ -1,11 +1,23 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:80"
+    "BaseUrl": "https://gateway:80"
   },
+  "SwaggerEndPoints": [
+    {
+      "Key": "fights",
+      "Config": [
+        {
+          "Name": "RPG-API",
+          "Version": "v1",
+          "Url": "http://rpg_api/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
   "Routes": [
     {
       "UpstreamPathTemplate": "/gateway/fights",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "DownstreamPathTemplate": "/fights",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -13,7 +25,8 @@
           "Host": "rpg_api",
           "Port": 80
         }
-      ]
+      ],
+      "SwaggerKey": "fights"
     }
   ]
 }
