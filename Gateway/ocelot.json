@@ -1,21 +1,19 @@
 {
   "GlobalConfiguration": {
-    // Example
-    //"BaseUrl": "https://localhost:80"
+    "BaseUrl": "https://localhost:80"
   },
   "Routes": [
     {
-      // Example
-      //"UpstreamPathTemplate": "/gateway/surveys",
-      //"UpstreamHttpMethod": [ "Get" ],
-      //"DownstreamPathTemplate": "/api/writers",
-      //"DownstreamScheme": "http",
-      //"DownstreamHostAndPorts": [
-      //  {
-      //    "Host": "localhost",
-      //    "Port": 5002
-      //  }
-      //]
+      "UpstreamPathTemplate": "/gateway/fights",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/fights",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "rpg_api",
+          "Port": 80
+        }
+      ]
     }
   ]
 }
