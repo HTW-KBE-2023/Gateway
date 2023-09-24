@@ -12,6 +12,16 @@
           "Url": "http://rpg_api/swagger/v1/swagger.json"
         }
       ]
+    },
+    {
+      "Key": "survey",
+      "Config": [
+        {
+          "Name": "Survey-API",
+          "Version": "v1",
+          "Url": "http://survey_api/swagger/v1/swagger.json"
+        }
+      ]
     }
   ],
   "Routes": [
@@ -92,5 +102,32 @@
         }
       ],
       "SwaggerKey": "rpg"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/surveys",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/surveys",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "survey_api",
+          "Port": 80
+        }
+      ],
+      "SwaggerKey": "survey"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/surveys/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/surveys/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "survey_api",
+          "Port": 80
+        }
+      ],
+      "SwaggerKey": "survey"
     }
+  ]
 }
