@@ -18,7 +18,7 @@
     {
       "UpstreamPathTemplate": "/gateway/fights",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "DownstreamPathTemplate": "/fights",
+      "DownstreamPathTemplate": "api/fights",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
