@@ -1,0 +1,21 @@
+{
+  "GlobalConfiguration": {
+    // Example
+    //"BaseUrl": "https://localhost:80"
+  },
+  "Routes": [
+    {
+      // Example
+      //"UpstreamPathTemplate": "/gateway/surveys",
+      //"UpstreamHttpMethod": [ "Get" ],
+      //"DownstreamPathTemplate": "/api/writers",
+      //"DownstreamScheme": "http",
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    "Host": "localhost",
+      //    "Port": 5002
+      //  }
+      //]
+    }
+  ]
+}
