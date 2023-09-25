@@ -36,7 +36,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "rpg"
+      "SwaggerKey": "rpg",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/fights/{everything}",
@@ -49,7 +52,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "rpg"
+      "SwaggerKey": "rpg",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/monsters",
@@ -62,7 +68,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "rpg"
+      "SwaggerKey": "rpg",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/monsters/{everything}",
@@ -75,7 +84,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "rpg"
+      "SwaggerKey": "rpg",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/players",
@@ -88,7 +100,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "rpg"
+      "SwaggerKey": "rpg",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/players/{everything}",
@@ -101,7 +116,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "rpg"
+      "SwaggerKey": "rpg",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/surveys",
@@ -114,7 +132,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "survey"
+      "SwaggerKey": "survey",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/surveys/{everything}",
@@ -127,7 +148,10 @@
           "Port": 80
         }
       ],
-      "SwaggerKey": "survey"
+      "SwaggerKey": "survey",
+      "FileCacheOptions": {
+        "TtlSeconds": 20
+      }
     }
   ]
 }

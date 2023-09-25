@@ -1,3 +1,4 @@
+using Ocelot.Cache.Redis;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot(builder.Configuration);
+builder.Services.AddOcelotRedisIntegration(builder.Configuration.GetConnectionString("Redis"));
 builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
 builder.Services.AddControllers();
